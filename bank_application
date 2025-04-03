@@ -1,0 +1,61 @@
+
+def deposit(balance,money):
+	return balance+money
+
+def withdraw(balance,money):
+	return balance-money
+
+def print_balance(bal):
+	pirnt("your balance = ",bal)
+
+def last_5(li,acc_num,acc_name,acc_IFSE):
+    if len(li)>=5:
+    	print("\t\t LAST FIVE TRANSACTIONS")
+    	print("ACCOUNT_NUMBER = ",acc_num,"                ACCOUNT_IFSE_CODE = ",acc_IFSE)
+    	print("ACCOUNT_NAME   = ",acc_name)
+    	print("DEPOSIT         WITHDRAW        TOTAL_BALANCE")
+    	for i in range(5):
+    		for j in range(3):
+    			a=len(str(li[i][j]))
+    			print(li[i][j],end=' ')
+    			for k in range(13-a):
+    				print("",end=' ')
+    		print()
+    else:
+        None
+
+
+
+acc_num=int(input("Enter your account number: "))
+acc_name=input("Enter your name: ")
+acc_IFSE=input("Enter your IFSE code: ")
+acc_bal=int(input("Deposit amount minimum(1000 rs): "))
+li=[]
+while(True):
+	sub_li=[]
+	print("Enter (1) to Deposit\nEnter (2) to Withdraw\nEnter (3) to Check Balance\nEnter (4) to check last five transaction\nEnter (5) to EXIT")
+	n=int(input("Choose the number: "))
+
+	if n==1:
+		dep=int(input("Enter Amount to Deposit: "))
+		acc_bal=deposit(acc_bal,dep)
+		sub_li=[dep,0,acc_bal]
+		li.append(sub_li)
+		print("DEPOSIT SUCCESSFULLY")
+	elif n == 2:
+		wit=int(input("Enter Amount to withdraw: "))
+		acc_bal=withdraw(acc_bal,wit)
+		sub_li=[0,wit,acc_bal]
+		li.append(sub_li)
+		print("WITHDRAW SUCCESSFULLY")
+
+	elif n == 3:
+		print("ACCOUNT_NUMBER = ",acc_num,"                ACCOUNT_IFSE_CODE = ",acc_IFSE)
+		print("ACCOUNT_NAME   = ",acc_name)
+		print("\nACCOUNT BALANCE = ",acc_bal)
+
+	elif n == 4:
+		last_5(li,acc_num,acc_name,acc_IFSE)
+
+	elif n == 5:
+		break
