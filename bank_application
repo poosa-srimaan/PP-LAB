@@ -26,7 +26,7 @@ def last_5(li,acc_num,acc_name,acc_IFSE):
     	print("ACCOUNT_NUMBER = ",acc_num,"                ACCOUNT_IFSE_CODE = ",acc_IFSE)
     	print("ACCOUNT_NAME   = ",acc_name)
     	print("DEPOSIT         WITHDRAW        TOTAL_BALANCE")
-    	for i in range(len(li):
+    	for i in range(len(li)):
     		for j in range(3):
     			a=len(str(li[i][j]))
     			print(li[i][j],end=' ')
