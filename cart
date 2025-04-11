@@ -1,0 +1,53 @@
+def add_item(item,price):
+    li=[item,price]
+    cart.append(li)    
+    
+def bill(li):
+    print("items     price")
+    total=0
+    for i in range(len(li)):
+        for j in range(2):
+            print(li[i][j],end='      ')
+            if j==1:
+                total=total+li[i][1]
+        print()
+    print("Your total Bill is = ",total)
+        
+            
+
+
+
+
+
+cart=[]
+items=['rice','dal','milk','none']
+price=[70,80,60,0]
+while(True):
+    print("Enter (1) to add items\nenter (2) to remove item\nEnter (3) to check bill\nenter (4) to checkout or exit\n")
+    choice=int(input("Enter your choice: "))
+    if choice==1:
+        ind=0
+        print("1 kg rice = 70 rs , 1 kg dal = 80 rs , 1 lit milk = 60 rs\n")
+        item=input("enter your item: ")
+        quant=int(input("enter quantity: "))
+        for i in range(len(items)):
+            if items[i]==item:
+                ind=i
+        if ind!=None:
+            amo=price[ind]*quant
+            
+            add_item(item,amo)
+        else:
+            print("Your item is not found")
+            
+    elif choice==2:
+        pass
+    elif choice==3:
+        print("Your bill is: ")
+        print(list(cart))
+        bill(cart)
+    elif choice==4:
+        break
+
+
+
