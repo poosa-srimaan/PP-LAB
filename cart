@@ -23,11 +23,6 @@ def remove_item(li,item):
             ind=i
     li.pop(ind)
     
-    
-
-
-
-
 
 
 cart=[]
@@ -61,7 +56,6 @@ while(True):
 
     elif choice==3:
         print("Your bill is: ")
-        print(list(cart))
         bill(cart)
 
 
