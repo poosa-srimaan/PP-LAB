@@ -1,0 +1,29 @@
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# print(my_list[0:2])
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# my_list[0:2] = 50, 55
+# print(my_list)
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# print(my_list[1:5:2])
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# slice_list_from_start = my_list[:4]
+# print(slice_list_from_start)
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# slice_list_till_end = my_list[4:]
+# print(slice_list_till_end)
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# last_three_elements = my_list[-3:]
+# print("Last three elements:", last_three_elements)
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# skip_every_second_from_end = my_list[-1:-6:-2]
+# print(skip_every_second_from_end)
+
+# my_list = [1, 5, 10, 15, 20, 25, 30]
+# reversed_list = my_list[::-1]
+# print(reversed_list)
